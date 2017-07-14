@@ -136,7 +136,6 @@ open class WebViewController: UIViewController {
     /// :nodoc:
     open override func viewDidLoad() {
         super.viewDidLoad()
-        title = urlRequest.url?.host
 
         if presentingViewController?.presentedViewController != nil {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
@@ -208,7 +207,7 @@ open class WebViewController: UIViewController {
         }
 
         if displaysWebViewTitle && theKeyPath == titleKeyPath {
-            title = webView.title
+             title = webView.title
         }
         
         if theKeyPath == estimatedProgressKeyPath {
