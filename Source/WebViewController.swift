@@ -182,14 +182,14 @@ open class WebViewController: UIViewController {
     // MARK: Actions
 
     @objc private func didTapDoneButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
 
     @objc private func didTapActionButton(_ sender: UIBarButtonItem) {
         if let url = urlRequest.url {
             let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: activities)
             activityVC.popoverPresentationController?.barButtonItem = sender
-            present(activityVC, animated: true, completion: nil)
+            present(activityVC, animated: false, completion: nil)
         }
     }
 
